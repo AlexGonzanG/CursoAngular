@@ -15,7 +15,7 @@ export class ZapatillasComponent implements OnInit {
     this.color = 'yellow';
     this.marcas = new Array();
     this.zapatillas = [
-      new Zapatilla('Fila Runner', 'Nike', 'Verdes', 40, true),
+      new Zapatilla('Fila Runner', 'Fila', 'Verdes', 40, true),
       new Zapatilla('Reboock Clasic', 'Reboock', 'Blanco', 80, true),
       new Zapatilla('Reboock Spartan', 'Reboock', 'Blanco', 80, false),
       new Zapatilla('Nike Runner', 'Nike', 'Negras', 60, true),
