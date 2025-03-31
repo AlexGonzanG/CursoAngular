@@ -10,12 +10,14 @@ export class ZapatillasComponent implements OnInit {
   public zapatillas: Array<Zapatilla>;
   public marcas: string[];
   public color: string;
+  public mi_marca: string;
 
   constructor() {
     this.color = 'yellow';
     this.marcas = new Array();
+    this.mi_marca = 'Lacoste';
     this.zapatillas = [
-      new Zapatilla('Fila Runner', 'Nike', 'Verdes', 40, true),
+      new Zapatilla('Fila Runner', 'Fila', 'Verdes', 40, true),
       new Zapatilla('Reboock Clasic', 'Reboock', 'Blanco', 80, true),
       new Zapatilla('Reboock Spartan', 'Reboock', 'Blanco', 80, false),
       new Zapatilla('Nike Runner', 'Nike', 'Negras', 60, true),
@@ -35,5 +37,12 @@ export class ZapatillasComponent implements OnInit {
       }
     });
     console.log(this.marcas);
+  }
+
+  getMiMarca() {
+    alert(this.mi_marca);
+  }
+  addMarca() {
+    this.marcas.push(this.mi_marca);
   }
 }
