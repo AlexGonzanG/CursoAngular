@@ -17,10 +17,10 @@ export class ZapatillasComponent implements OnInit {
     this.marcas = new Array();
     this.mi_marca = 'Lacoste';
     this.zapatillas = [
-      new Zapatilla('Fila Runner', 'Fila', 'Verdes', 40, true),
+      new Zapatilla('Nike Airmax', 'Nike', 'Verdes', 40, true),
       new Zapatilla('Reboock Clasic', 'Reboock', 'Blanco', 80, true),
-      new Zapatilla('Reboock Spartan', 'Reboock', 'Blanco', 80, false),
-      new Zapatilla('Nike Runner', 'Nike', 'Negras', 60, true),
+      new Zapatilla('Reboock Spartan', 'Reboock', 'Blanco', 180, false),
+      new Zapatilla('Nike Runner', 'Nike', 'Negras', 160, true),
       new Zapatilla('Adidas Stan Smith', 'Adidas', 'Gris', 180, false),
     ];
   }
@@ -44,5 +44,17 @@ export class ZapatillasComponent implements OnInit {
   }
   addMarca() {
     this.marcas.push(this.mi_marca);
+  }
+
+  borrarMarca(index: any) {
+    //delete this.marcas[index];
+    this.marcas.splice(index, 1);
+  }
+
+  onBlur() {
+    console.log('Has salido del imput');
+  }
+  mostrarPalabra() {
+    alert(this.mi_marca);
   }
 }
